@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#FFFFFF"
+    tools:context=".screens.DasboardFragment">
+
+    <View
+        android:id="@+id/yuhu"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="5dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@android:color/holo_purple"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/yuhu"
+        app:layout_constraintStart_toEndOf="@+id/yuhu"
+        app:layout_constraintTop_toTopOf="@id/yuhu">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="$ 200"
+                android:textColor="#2A2535"
+                android:textSize="40dp" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/transfer_button"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/holo_blue_bright"
+                app:cardElevation="10dp"
+                app:cornerRadius="15dp"
+                app:icon="@drawable/ic_baseline_account_balance_24"
+                app:iconGravity="textStart"
+                app:iconSize="60dp"
+                app:iconTint="#FFFFFF" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/history_button"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                app:backgroundTint="@android:color/holo_blue_bright"
+                app:cardElevation="10dp"
+                app:cornerRadius="15dp"
+                app:icon="@drawable/ic_baseline_restore_24"
+                app:iconGravity="textStart"
+                app:iconSize="60dp"
+                app:iconTint="#FFFFFF" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/call_button"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/holo_blue_bright"
+                app:cardElevation="10dp"
+                app:cornerRadius="15dp"
+                app:icon="@drawable/ic_baseline_call_24"
+                app:iconGravity="textStart"
+                app:iconSize="60dp"
+                app:iconTint="#FFFFFF" />
+
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

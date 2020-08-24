@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.disebud.livecode.screens.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_dasboardFragment"
+            app:destination="@id/dasboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dasboardFragment"
+        android:name="com.disebud.livecode.screens.DasboardFragment"
+        android:label="fragment_dasboard"
+        tools:layout="@layout/fragment_dasboard" >
+        <action
+            android:id="@+id/action_dasboardFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_dasboardFragment_to_transferToFragment"
+            app:destination="@id/transferToFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.disebud.livecode.screens.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/transferToFragment"
+        android:name="com.disebud.livecode.screens.TransferToFragment"
+        android:label="fragment_transfer_to"
+        tools:layout="@layout/fragment_transfer_to" >
+        <action
+            android:id="@+id/action_transferToFragment_to_transferAmountFragment"
+            app:destination="@id/transferAmountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transferAmountFragment"
+        android:name="com.disebud.livecode.screens.TransferAmountFragment"
+        android:label="fragment_transfer_amount"
+        tools:layout="@layout/fragment_transfer_amount" >
+        <action
+            android:id="@+id/action_transferAmountFragment_to_transferSuccessFragment"
+            app:destination="@id/transferSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transferSuccessFragment"
+        android:name="com.disebud.livecode.screens.TransferSuccessFragment"
+        android:label="fragment_transfer_success"
+        tools:layout="@layout/fragment_transfer_success" />
+</navigation>

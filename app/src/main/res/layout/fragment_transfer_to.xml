@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#FFFFFF"
+    tools:context=".screens.TransferToFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp"
+        android:paddingTop="20dp"
+        android:outlineSpotShadowColor="#202020"
+        app:cardBackgroundColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="50dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/cardview_light_background"
+                    android:tint="#03A9F4"
+                    android:src="@drawable/ic_baseline_account_box_24" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:textColorHint="@color/design_default_color_on_secondary"
+                    app:hintTextColor="@color/design_default_color_on_secondary"
+                    app:boxStrokeColor="@color/cardview_dark_background"
+                    app:boxBackgroundColor="@color/design_default_color_surface"
+                    android:background="@color/colorPrimary"
+                    app:boxCornerRadiusTopStart="10dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/contact_transfer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="No.Rekening"
+                        android:textColor="#000000"
+                        android:textColorHint="#020202"
+                        app:hintTextColor="@color/design_default_color_on_secondary" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_baseline_account_balance_24"
+                    android:backgroundTint="@color/cardview_light_background"
+                    android:tint="#03A9F4"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:textColorHint="@color/design_default_color_on_secondary"
+                    app:hintTextColor="@color/design_default_color_on_secondary"
+                    app:boxStrokeColor="@color/cardview_dark_background"
+                    android:outlineProvider="background"
+                    app:boxBackgroundColor="@color/design_default_color_surface"
+                    app:boxCornerRadiusTopStart="10dp">
+
+
+                    <Spinner
+                        android:id="@+id/dropdown_bank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/bank_arrays"
+                        android:textColor="#000000"
+                        android:textColorHint="#020202"
+                        android:background="#575757"
+                        android:prompt="@string/bank_prompt"></Spinner>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            </LinearLayout>
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/next_transfer"
+                android:layout_width="match_parent"
+                android:padding="15dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                app:backgroundTint="#03A9F4"
+                android:text="@string/next_button"
+                android:textColor="#FFFFFF">
+
+            </com.google.android.material.button.MaterialButton>
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
